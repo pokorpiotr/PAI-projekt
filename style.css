@@ -1,5 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
+    color: #2f3640;
+    background-color: #f5f6fa;
 }
 
 header {
@@ -21,11 +23,46 @@ header > h1 {
     text-align: center;
 }
 
-main {
-    background-color: whitesmoke;
+table {
+    border-collapse: collapse;
+}
+
+main > td, th {
+    border: 2px solid #2f3640;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: #718093;
+    color: #f5f6fa;
 }
 
 footer {
     height: 40px;
     text-align: center;
+}
+
+input[type=button] {
+    color: #f5f6fa;
+    margin: 5px;
+    background-color: #718093;
+    border: 2px solid #2f3640;
+    height: 30px;
+    width: auto;
+}
+
+input[type=button]:focus {
+    outline: none;
+}
+
+input[type=text] {
+    margin: 3px;
+    padding: 5px;
+    border-radius: 2px;
+    border-style: solid;
+}
+
+input[type=text]:focus {
+    border: 3px solid #2f3640;
 }

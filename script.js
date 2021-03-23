@@ -52,7 +52,8 @@ function showTable() {
 }
 
 function deleteSpecific() {
-    rowId = 
+    let rowId = parseInt(document.getElementById("deletePersonSelect")).value;
+    
     console.log("deleteSpecific");
 }
 

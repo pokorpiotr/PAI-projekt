@@ -24,21 +24,20 @@ function showTable() {
     let person = {
 
     }
-    for(let i = 0; i < people.length; i++)
-    {
+    for (let i = 0; i < people.length; i++) {
         person = {
             person_id: people[i].id,
             person_firstName: people[i].firstName,
             person_surname: people[i].surname,
             person_age: people[i].age
         }
-     /*   document.getElementById("tab").innerHTML += 
-        `<tr>
-            <td>${person_id}</td>
-            <td>${person_firstName}</td>
-            <td>${person_surname}</td>
-            <td>${person_age}</td>
-        </tr>`/*/
+        /*   document.getElementById("tab").innerHTML += 
+           `<tr>
+               <td>${person_id}</td>
+               <td>${person_firstName}</td>
+               <td>${person_surname}</td>
+               <td>${person_age}</td>
+           </tr>`/*/
         let row = tab.insertRow(i)
         let cellId = row.insertCell(0);
         let cellFirstName = row.insertCell(1);
@@ -52,8 +51,9 @@ function showTable() {
 }
 
 function deleteSpecific() {
-    let rowId = parseInt(document.getElementById("deletePersonSelect")).value;
-    
+    let deletePersonSelect = parseInt(document.getElementById("deletePersonSelect")).value - 1;
+    tab.deleteRow(deletePersonSelect);
+
     console.log("deleteSpecific");
 }
 

@@ -39,7 +39,7 @@ th {
 }
 
 td {
-    background-color: #f5f6fa;
+    background-color:white;
     color: #718093;
 }
 
@@ -66,6 +66,7 @@ input[type=text] {
     padding: 5px;
     border-radius: 2px;
     border-style: solid;
+    background-color: white;
 }
 
 input[type=text]:focus {

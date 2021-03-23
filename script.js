@@ -1,8 +1,8 @@
 var firstName;
 var surname;
 var age;
-var id = 1;
 var people = [];
+var id = people.length + 1;
 let tab = document.getElementById("tab");
 
 
@@ -31,15 +31,8 @@ function showTable() {
             person_firstName: people[i].firstName,
             person_surname: people[i].surname,
             person_age: people[i].age
-        }
-        /*   document.getElementById("tab").innerHTML += 
-           `<tr>
-               <td>${person_id}</td>
-               <td>${person_firstName}</td>
-               <td>${person_surname}</td>
-               <td>${person_age}</td>
-           </tr>`/*/
-        let row = tab.insertRow(i)
+        };
+        let row = tab.insertRow(i);
         let cellId = row.insertCell(0);
         let cellFirstName = row.insertCell(1);
         let cellSurname = row.insertCell(2);
@@ -60,7 +53,7 @@ function deleteSpecific() {
 
 function deleteAll() {
     people.splice(0, people.length);
-    id = 1;
+    id = people.length + 1;
     showTable();
 }
 

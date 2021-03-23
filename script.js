@@ -21,6 +21,7 @@ function addPerson() {
 }
 
 function showTable() {
+    tab.innerText = "";
     let person = {
 
     }
@@ -51,14 +52,16 @@ function showTable() {
 }
 
 function deleteSpecific() {
-    let deletePersonSelect = parseInt(document.getElementById("deletePersonSelect")).value - 1;
-    tab.deleteRow(deletePersonSelect);
-
-    console.log("deleteSpecific");
+    let deletePersonSelect = parseInt(document.getElementById("deletePersonSelect").value) - 1;
+    people.splice(deletePersonSelect, 1);
+    console.log(people);
+    showTable();
 }
 
 function deleteAll() {
-    console.log("deleteAll");
+    people.splice(0, people.length);
+    id = 1;
+    showTable();
 }
 
 function fontSizeIncrease() {

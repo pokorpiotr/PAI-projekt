@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <title>Projekt</title>
+</head>
+<body>
+    <header>
+        <img src="100x50.png" alt="image">
+        <h1>Projekt</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Osoby</h1>
+            Imię: <input type="text" id="firstName"><br>
+            Nazwisko: <input type="text" id="surname"><br>
+            Wiek: <input type="text" id="age"><br><br>
+            <input type="button" value="Dodaj" onclick="addPerson()"><br>
+            <input type="button" value="Wyświetl" onclick="showTable()">
+        </div>
+        <div>
+            <h2>Tabela osób</h2>
+            <table>
+                <tr>
+                    <td>Id</td><td>Imię</td><td>Nazwisko</td><td>Wiek</td>
+                </tr>
+            </table>
+            <input type="text" id="deletePersonSelect"><input type="button" value="Usuń pozycję" onclick="deletePerson()"><br>
+            <input type="button" value="Usuń wszystkie pzoycje" onclick="deleteAll()">
+        </div>
+        <div>
+            <h2>Ustawienia strony</h2>
+            <input type="button" value="Większa czcionka" onclick="fontSizeIncrease()">
+            <input type="button" value="Mniejsza czcionka" onclick="fontSizeDecrease()">
+            <input type="button" value="Odwróć kolory" onclick="themeChange()">
+        </div>
+    </main>
+    <footer>
+        <p>Autor: Piotr Pokornowski</p>
+    </footer>
+</body>
+</html>

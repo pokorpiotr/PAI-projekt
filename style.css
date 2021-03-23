@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    margin-top: 5px;
+    height: auto;
+    overflow: auto;
+}
+
+header > img {
+    float: left;
+    width: 30%;
+    height: auto;
+    text-align: center;
+}
+
+header > h1 {
+    float: inherit;
+    text-align: center;
+}
+
+main {
+}
+
+footer {
+    height: 40px;
+    text-align: center;
+}

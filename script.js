@@ -47,6 +47,23 @@ function showTable() {
 function deleteSpecific() {
     let deletePersonSelect = parseInt(document.getElementById("deletePersonSelect").value) - 1;
     people.splice(deletePersonSelect, 1);
+    let counter = people.length;
+    let person = {};
+    for (let i = 0; i < counter; i++) {
+        person = {
+            person_id: people[i].id,
+            person_firstName: people[i].firstName,
+            person_surname: people[i].surname,
+            person_age: people[i].age
+        };
+        if (person.person_id > deletePersonSelect) {
+            person.person_id--;
+        }
+        console.log(person);
+        people.push(person);
+    }
+
+
     console.log(people);
     showTable();
 }

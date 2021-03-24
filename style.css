@@ -4,6 +4,11 @@ body {
     background-color: #f5f6fa;
 }
 
+body.dark {
+    background-color: #2f3640;
+    color: #f5f6fa;
+}
+
 header {
     width: 100%;
     margin-top: 5px;
@@ -32,6 +37,7 @@ td, th {
     padding: 5px;
     text-align: center;
 }
+
 
 th {
     background-color: #718093;

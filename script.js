@@ -4,7 +4,9 @@ var age;
 var people = [];
 var id = people.length + 1;
 let tab = document.getElementById("tab");
-
+var bodyFontSize = 16;
+var inputFontSize = 12;
+var elements = document.body.getElementsByTagName("input");
 
 function addPerson() {
     firstName = document.getElementById("firstName").value;
@@ -27,20 +29,20 @@ function showTable() {
     }
     for (let i = 0; i < people.length; i++) {
         person = {
-            person_id: people[i].id,
-            person_firstName: people[i].firstName,
-            person_surname: people[i].surname,
-            person_age: people[i].age
+            id: people[i].id,
+            firstName: people[i].firstName,
+            surname: people[i].surname,
+            age: people[i].age
         };
         let row = tab.insertRow(i);
         let cellId = row.insertCell(0);
         let cellFirstName = row.insertCell(1);
         let cellSurname = row.insertCell(2);
         let cellAge = row.insertCell(3);
-        cellId.innerText = person.person_id;
-        cellFirstName.innerText = person.person_firstName;
-        cellSurname.innerText = person.person_surname;
-        cellAge.innerText = person.person_age;
+        cellId.innerText = person.id;
+        cellFirstName.innerText = person.firstName;
+        cellSurname.innerText = person.surname;
+        cellAge.innerText = person.age;
     }
 }
 
@@ -49,22 +51,23 @@ function deleteSpecific() {
     people.splice(deletePersonSelect, 1);
     let counter = people.length;
     let person = {};
+    tab.innerText = "";
     for (let i = 0; i < counter; i++) {
         person = {
-            person_id: people[i].id,
-            person_firstName: people[i].firstName,
-            person_surname: people[i].surname,
-            person_age: people[i].age
+            id: people[i].id,
+            firstName: people[i].firstName,
+            surname: people[i].surname,
+            age: people[i].age
         };
-        if (person.person_id > deletePersonSelect) {
-            person.person_id--;
+        if (person.id > deletePersonSelect) {
+            person.id--;
         }
-        console.log(person);
+        //console.log(person);
         people.push(person);
     }
-
-
-    console.log(people);
+    people.splice(0, counter);
+    id--;
+    //console.log(people);
     showTable();
 }
 
@@ -75,13 +78,65 @@ function deleteAll() {
 }
 
 function fontSizeIncrease() {
-    console.log("fontSizeIncrease");
+    document.body.style.fontSize = (bodyFontSize + 1) + "px";
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.fontSize = (inputFontSize + 1) + "px";
+    }
+    bodyFontSize++;
+    inputFontSize++;
 }
 
 function fontSizeDecrease() {
-    console.log("fontSizeDecrease");
+    document.body.style.fontSize = (bodyFontSize - 1) + "px";
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.fontSize = (inputFontSize + 1) + "px";
+    }
+    bodyFontSize--;
+    inputFontSize--;
 }
 
+var isBorderColorChanged = false;
+
 function themeChange() {
+    document.body.classList.toggle('dark');
+    let inputButton = document.getElementsByClassName("button");
+    let inputText = document.getElementsByClassName("text");
+    let th = document.getElementsByTagName("th");
+    let td = document.getElementsByTagName("td");
+    if (isBorderColorChanged == false) {
+        for (let i = 0; i < inputButton.length; i++) {
+            inputButton[i].style.borderColor = "#f5f6fa";
+        }
+        for (let i = 0; i < inputText.length; i++) {
+            inputText[i].style.borderColor = "#7f8fa6";
+        }
+        for (let i = 0; i < th.length; i++) {
+            th[i].style.borderColor = "#f5f6fa";
+        }
+        for (let i = 0; i < td.length; i++) {
+            td[i].style.borderColor = "#f5f6fa";
+            td[i].style.color = "#f5f6fa";
+            td[i].style.backgroundColor = "#2f3640";
+        }
+        isBorderColorChanged = true;
+    } else {
+        for (let i = 0; i < inputButton.length; i++) {
+            inputButton[i].style.borderColor = "#2f3640";
+        }
+        for (let i = 0; i < inputText.length; i++) {
+            inputText[i].style.borderColor = "#718093";
+        }
+        for (let i = 0; i < th.length; i++) {
+            th[i].style.borderColor = "#2f3640";
+        }
+        for (let i = 0; i < td.length; i++) {
+            td[i].style.borderColor = "#2f3640";
+            td[i].style.color = "#718093";
+            td[i].style.backgroundColor = "#f5f6fa";
+        }
+        isBorderColorChanged = false;
+    }
+
     console.log("themeChange");
 }

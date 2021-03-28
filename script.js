@@ -137,6 +137,4 @@ function themeChange() {
         }
         isBorderColorChanged = false;
     }
-
-    console.log("themeChange");
 }

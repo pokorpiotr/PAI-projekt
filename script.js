@@ -85,6 +85,8 @@ function fontSizeIncrease() {
     }
     bodyFontSize++;
     inputFontSize++;
+    console.log("bodyFontSize: " + bodyFontSize);
+    console.log("inputFontSize: " + inputFontSize);
 }
 
 function fontSizeDecrease() {
@@ -94,6 +96,8 @@ function fontSizeDecrease() {
     }
     bodyFontSize--;
     inputFontSize--;
+    console.log("bodyFontSize: " + bodyFontSize);
+    console.log("inputFontSize: " + inputFontSize);
 }
 
 var isBorderColorChanged = false;

@@ -1,80 +1,83 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #2f3640;
-    background-color: #f5f6fa;
+	font-family: "Roboto", sans-serif;
+	color: #2f3640;
+	background-color: #f5f6fa;
+	font-size: 16;
 }
 
 body.dark {
-    background-color: #2f3640;
-    color: #f5f6fa;
+	background-color: #2f3640;
+	color: #f5f6fa;
 }
 
 header {
-    width: 100%;
-    margin-top: 5px;
-    height: auto;
-    overflow: auto;
+	width: 100%;
+	margin-top: 5px;
+	height: auto;
+	overflow: auto;
 }
 
 header > img {
-    float: left;
-    width: 30%;
-    height: auto;
-    text-align: center;
+	float: left;
+	width: 30%;
+	height: auto;
+	text-align: center;
 }
 
 header > h1 {
-    float: inherit;
-    text-align: center;
+	float: inherit;
+	text-align: center;
 }
 
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
-td, th {
-    border: 2px solid #2f3640;
-    padding: 5px;
-    text-align: center;
+td,
+th {
+	border: 2px solid #2f3640;
+	padding: 5px;
+	text-align: center;
 }
-
 
 th {
-    background-color: #718093;
-    color: #f5f6fa;
+	background-color: #718093;
+	color: #f5f6fa;
 }
 
 td {
-    background-color:white;
-    color: #718093;
+	background-color: white;
+	color: #718093;
 }
 
 footer {
-    height: 40px;
-    text-align: center;
+	height: 40px;
+	text-align: center;
 }
 
-input[type=button] {
-    color: #f5f6fa;
-    margin: 5px;
-    background-color: #718093;
-    border: 2px solid #2f3640;
-    height: 30px;
-    width: auto;
+input[type="button"] {
+	color: #f5f6fa;
+	margin: 5px;
+	background-color: #718093;
+	border: 2px solid #2f3640;
+	height: 30px;
+	width: auto;
+	font-size: 12;
 }
 
-input[type=button]:focus {
-    outline: none;
+input[type="button"]:focus {
+	outline: none;
 }
 
-input[type=text] {
-    margin: 3px;
-    padding: 5px;
-    border-radius: 2px;
-    border-style: solid;
-    background-color: white;
+input[type="text"] {
+	margin: 3px;
+	padding: 5px;
+	border-radius: 2px;
+	border-style: solid;
+	background-color: white;
+	font-size: 12;
 }
 
-input[type=text]:focus {
-    border: 3px solid #2f3640;
+input[type="text"]:focus {
+	border: 3px solid #2f3640;
 }
